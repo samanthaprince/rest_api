@@ -16,7 +16,7 @@ chefRouter.get('/chefs/:id', tokenauth, (req, res) => {
   Chefs.findById(req.params.id)
     .populate('recipes', 'name')
     .exec((err, chef) => {
-      console.log(chef);
+      // console.log(chef);
       res.json(chef);
     });
 });
@@ -42,7 +42,6 @@ chefRouter.put('/chefs/:id', tokenauth, (req, res) => {
     if (err) return res.send(err);
     res.json(chef);
   });
-
 });
 
 

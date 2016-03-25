@@ -19,6 +19,7 @@ authRouter.post('/signup', auth, function (req, res) {
     }
     console.log('chef saved');
     res.status(200).json({token: chef.generateToken()});
+    // res.status(200).json({msg: 'user saved'});
   });
 });
 
